@@ -4,21 +4,21 @@ import { EncryptedText } from "@/components/ui/encrypted-text";
 import { Menu, X } from "lucide-react";
 
 interface NavBarProps {
-  scrollToHome: () => void;
-  scrollToAbout: () => void;
-  scrollToProjects: () => void;
-  scrollToContact: () => void;
-  scrollToFAQ: () => void; // added
+  scrollMap: Record<
+    "home" | "about" | "projects" | "contact" | "faq",
+    () => void
+  >;
 }
 
-const NavBar: React.FC<NavBarProps> = ({
-  scrollToHome,
-  scrollToAbout,
-  scrollToProjects,
-  scrollToContact,
-  scrollToFAQ, // added
-}) => {
+const NavBar: React.FC<NavBarProps> = ({ scrollMap }) => {
   const [open, setOpen] = useState(false);
+
+  const sections: { label: string; key: keyof typeof scrollMap }[] = [
+    { label: "AI", key: "faq" },
+    { label: "About", key: "about" },
+    { label: "Projects", key: "projects" },
+    { label: "Contact", key: "contact" },
+  ];
 
   return (
     <header className="flex w-full justify-between items-center p-5 lg:p-10 text-white relative">
@@ -32,18 +32,11 @@ const NavBar: React.FC<NavBarProps> = ({
 
       {/* Desktop nav */}
       <ul className="hidden md:flex items-center space-x-6 text-lg">
-        <li className="hover:text-[#68D6FF]">
-          <button onClick={scrollToFAQ}>AI</button>
-        </li>
-        <li className="hover:text-[#68D6FF]">
-          <button onClick={scrollToAbout}>About</button>
-        </li>
-        <li className="hover:text-[#68D6FF]">
-          <button onClick={scrollToProjects}>Projects</button>
-        </li>
-        <li className="hover:text-[#68D6FF]">
-          <button onClick={scrollToContact}>Contact</button>
-        </li>
+        {sections.map((sec) => (
+          <li key={sec.key} className="hover:text-[#68D6FF]">
+            <button onClick={scrollMap[sec.key]}>{sec.label}</button>
+          </li>
+        ))}
       </ul>
 
       {/* Mobile hamburger button */}
@@ -56,49 +49,20 @@ const NavBar: React.FC<NavBarProps> = ({
       </button>
 
       {/* Mobile dropdown menu */}
-      {/* Mobile dropdown menu */}
       {open && (
-        <ul className="absolute top-full left-0 w-full bg-black  flex flex-col items-start gap-2 p-5 text-lg md:hidden border-t border-white/10 z-50">
-          <li className="hover:text-[#68D6FF]">
-            <button
-              onClick={() => {
-                scrollToFAQ(); // fixed
-                setOpen(false);
-              }}
-            >
-              AI
-            </button>
-          </li>
-          <li className="hover:text-[#68D6FF]">
-            <button
-              onClick={() => {
-                scrollToAbout();
-                setOpen(false);
-              }}
-            >
-              About
-            </button>
-          </li>
-          <li className="hover:text-[#68D6FF]">
-            <button
-              onClick={() => {
-                scrollToProjects();
-                setOpen(false);
-              }}
-            >
-              Projects
-            </button>
-          </li>
-          <li className="hover:text-[#68D6FF]">
-            <button
-              onClick={() => {
-                scrollToContact();
-                setOpen(false);
-              }}
-            >
-              Contact
-            </button>
-          </li>
+        <ul className="absolute top-full left-0 w-full bg-black flex flex-col items-start gap-2 p-5 text-lg md:hidden border-t border-white/10 z-50">
+          {sections.map((sec) => (
+            <li key={sec.key} className="hover:text-[#68D6FF]">
+              <button
+                onClick={() => {
+                  scrollMap[sec.key]();
+                  setOpen(false);
+                }}
+              >
+                {sec.label}
+              </button>
+            </li>
+          ))}
         </ul>
       )}
     </header>
