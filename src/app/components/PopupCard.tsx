@@ -8,13 +8,11 @@ interface Props {
 }
 
 export default function PopUp({ title, time, headtitle, description }: Props) {
-  const x = headtitle ? "h-40" : "h-auto";
-
   return (
     <div
       className={`
         relative w-full max-w-3xl
-        ${x} sm:h-56 lg:h-48
+        h-auto sm:h-56 lg:h-48
         rounded-md overflow-hidden cursor-pointer
         transition-transform lg:mx-5
         hover:scale-[1.03]
@@ -62,11 +60,11 @@ export default function PopUp({ title, time, headtitle, description }: Props) {
 
             <p
               className="
-                w-16 h-6 sm:w-40 sm:h-10
+                w-20 h-6 sm:w-40 sm:h-10
                 bg-[#3A7BD5]
                 flex justify-center items-center
                 rounded-[40px]
-                font-medium text-xs sm:text-lg
+                font-normal sm:font-medium text-xs sm:text-lg
               "
             >
               {time}

@@ -6,8 +6,8 @@ import InfoList from "./infoHeroList";
 function HeroContent() {
   return (
     <section className="relative flex justify-center items-center w-full h-screen">
-      <div className="text-white flex flex-col justify-center items-center gap-8 absolute top-[13%]  p-5">
-        <h1 className="flex flex-col items-center sm:flex-row gap-1 text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold z-40">
+      <div className="text-white flex flex-col justify-center items-center gap-6 sm:gap-8 absolute top-[13%]  p-5">
+        <h1 className="flex flex-col items-center sm:flex-row gap-1 text-[40px] sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold z-40">
           Developer From <span className="text-[#68D6FF]">Tunisia</span>
         </h1>
 
@@ -35,14 +35,15 @@ function HeroContent() {
         w-44 sm:w-72 lg:w-80 xl:w-96 h-auto
           absolute 
                                  
-          bottom-0 -left-2
+          top-80 left-0.5
 
           /* TABLET POSITION D */
           sm:-bottom-12 sm:left-20
 
           /* LAPTOP POSITION D */
           lg:top-16 lg:left-4
-          xl:top-20 xl:left-48
+
+          xl:top-12 xl:left-40
 
           z-20 sm:z-0 
         "

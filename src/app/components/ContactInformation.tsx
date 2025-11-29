@@ -37,7 +37,7 @@ export default function ContactInput() {
     <form
       onSubmit={handleSubmit}
       autoComplete="off"
-      className="w-full lg:w-xl h-fit flex flex-col gap-4"
+      className="w-full lg:w-xl h-fit flex flex-col gap-8 md:gap-4"
     >
       <div className="text-white flex flex-col gap-3 w-full">
         <input

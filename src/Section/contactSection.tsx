@@ -5,10 +5,10 @@ import Image from "next/image";
 
 function ContactSection() {
   return (
-    <section className="relative w-full h-full pt-10 flex flex-col justify-between overflow-visible">
+    <section className="relative w-full h-screen pt-10 flex flex-col justify-between overflow-visible">
       <div className="relative flex flex-col lg:flex-row justify-between mb-6 items-center lg:items-end gap-10 px-5 lg:px-10 flex-1">
         {/* Left content */}
-        <div className="w-full max-w-xl flex flex-col justify-center gap-4">
+        <div className="w-full max-w-xl flex flex-col justify-center gap-10 md:gap-4">
           {/* Title */}
           <div className="flex flex-col items-center sm:items-start ">
             <h2 className="text-[40px] font-semibold text-white">Contact</h2>
@@ -23,7 +23,7 @@ function ContactSection() {
             <ContactInput />
             <SocailMedia
               linkedin="https://www.linkedin.com/in/mohamed-rezgallah/"
-              github="#"
+              github="https://github.com/6rjbwrm7mk-wq"
               whatsapp="#"
             />
           </div>
@@ -36,7 +36,7 @@ function ContactSection() {
           alt="Contact Image"
           width={260}
           height={260}
-          className="w-16 sm:w-24 lg:w-64 absolute right-1 -bottom-7 lg:relative lg:right-0 lg:bottom-0 "
+          className="w-32 sm:w-24 lg:w-64 absolute right-1 -bottom-7 lg:relative lg:right-0 lg:bottom-0 "
         />
       </div>
 

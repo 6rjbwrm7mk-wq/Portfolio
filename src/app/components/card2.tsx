@@ -20,8 +20,8 @@ function PopUpCard({
 }: PopUpCardProps) {
   return (
     <div
-      className={`w-full max-w-sm sm:max-w-md md:max-w-lg 
-      h-56 sm:h-64 md:h-72 lg:h-80 
+      className={`w-full sm:max-w-md md:max-w-2xl lg:max-w-3xl 
+      h-60 sm:h-64 md:h-96 lg:h-80 
       rounded-xl shadow-lg relative overflow-hidden 
       transition-transform duration-500 transform
       ${flipCard ? "scale-x-[-1]" : ""}`}

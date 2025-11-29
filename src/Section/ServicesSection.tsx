@@ -26,7 +26,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden p-5 gap-4 lg:p-10 flex flex-col items-center justify-between">
+    <section className="relative w-full min-h-screen overflow-hidden p-5 gap-8 md:gap-4 lg:p-10 flex flex-col items-center justify-start md:justify-between">
       {/* Title & Subtitle */}
       <div className="w-full flex flex-col justify-center items-center gap-2">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
@@ -43,10 +43,9 @@ export default function ServicesSection() {
         className="
           w-full 
           flex 
-          flex-col md:flex-row 
-          items-start md:items-center 
-          justify-between 
-          gap-1.5 sm:gap-6 lg:gap-10
+          flex-col items-start justify-start 
+          md:flex-row  md:items-center md:justify-center
+          gap-1 sm:gap-6
         "
         variants={containerVariants}
         initial="hidden"
@@ -76,7 +75,7 @@ export default function ServicesSection() {
 
         {/* IMAGE CENTER */}
         <motion.div
-          className="flex justify-center w-full md:w-auto mb-2"
+          className="flex justify-center w-full md:w-auto "
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{
             opacity: 1,
@@ -94,7 +93,7 @@ export default function ServicesSection() {
             width={320}
             height={480}
             className="
-              absolute bottom-0 -right-4 sm:right-0  sm:relative w-28 sm:w-64 md:w-68 
+              absolute bottom-0 right-0  sm:relative w-28 sm:w-52 md:w-60 
             "
           />
         </motion.div>

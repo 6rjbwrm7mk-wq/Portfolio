@@ -17,25 +17,21 @@ interface Props {
 
 export default function InformationList({ data: projects }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-
   const shouldScroll = projects.length > 3;
 
   return (
-    <div className="relative w-full max-w-[880px] h-auto lg:h-[580px]  lg:pr-4  flex items-center">
-      {/* List Wrapper */}
+    <div className="relative w-full max-w-[880px] h-auto lg:h-full flex items-center">
       <div
         ref={containerRef}
         className={`
-          w-full 
-          flex flex-col gap-4  lg:pb-8
+          w-full flex flex-col gap-4 lg:pb-8
           ${
             shouldScroll
-              ? "h-[540px] overflow-y-scroll scroll-smooth"
-              : "h-[540px] "
+              ? "h-[540px] overflow-y-scroll scroll-smooth snap-y snap-mandatory pt-6"
+              : "h-auto"
           }
-          ${shouldScroll ? "snap-y snap-mandatory " : ""}
-          [&::-webkit-scrollbar]:hidden 
-          [-ms-overflow-style:none] 
+          [&::-webkit-scrollbar]:hidden
+          [-ms-overflow-style:none]
           [scrollbar-width:none]
         `}
       >
@@ -46,14 +42,14 @@ export default function InformationList({ data: projects }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
-            className={shouldScroll ? "snap-start" : ""}
+            className={`${shouldScroll ? "snap-start" : ""} ${
+              i === 0 && shouldScroll ? "mt-0.5" : ""
+            }`}
           >
             <PopUp {...p} />
           </motion.div>
         ))}
       </div>
-
-      {/* Scroll Indicator Dots (Only when scrolling enabled) */}
     </div>
   );
 }

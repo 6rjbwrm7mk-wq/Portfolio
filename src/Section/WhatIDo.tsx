@@ -27,9 +27,10 @@ function WhatIDoSection() {
       {/* Cards + Image */}
       <div
         className="
-          w-full flex flex-col 
+          w-full  flex flex-col 
           items-center justify-center
-          gap-6 md:gap-10 
+          gap-6 md:gap-8 lg:gap-16 
+          lg:h-fit
           lg:flex-row lg:justify-between lg:items-center
         "
       >
@@ -52,8 +53,10 @@ function WhatIDoSection() {
         {/* Center Image */}
         <div
           className="
-          absolute bottom-0 right-1 md:bottom-0 md:right-0 w-24 md:relative sm:w-24 md:w-40 lg:w- xl:w-[200px]
+          scale-x-[-1]
+          absolute bottom-0 right-1 md:bottom-0 md:right-0 w-28 lg:relative sm:w-40  lg:w-52
           flex justify-center
+          z-20
         "
         >
           <Image

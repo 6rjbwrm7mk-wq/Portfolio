@@ -34,9 +34,9 @@ function ExperienceSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden p-5 lg:p-10 flex flex-col">
+    <section className="relative w-full h-screen overflow-hidden p-5 gap-4 lg:gap- lg:p-10 flex flex-col">
       {/* Title */}
-      <div className="w-full flex flex-col justify-center items-start gap-2 lg:gap-4">
+      <div className="w-full flex flex-col justify-center items-center md:items-start  gap-2 lg:gap-4">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
           Experience
         </h2>
@@ -47,16 +47,16 @@ function ExperienceSection() {
       </div>
 
       {/* Content Wrapper */}
-      <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8 mt-6 lg:mt-0">
+      <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8 mt-6 lg:mt-0 overflow-hidden">
         {/* IMAGE */}
-        <div className=" absolute bottom-0 right-1 md:bottom-0 md:right-0 w-24 md:relative sm:w-24 md:w-72 lg:w-[400px] flex justify-center ">
+        <div className="scale-x-[-1] sm:scale-x-[1] absolute bottom-0 right-1 md:bottom-0 md:right-0 w-48 md:relative sm:w-24 md:w-72 lg:w-[400px] flex justify-center ">
           {" "}
           <Image
             src="/ExperienceImg.png"
             alt="What I Do"
             width={480}
             height={490}
-            className=" w-40 sm:w-full h-auto object-contain z-30 pointer-events-none "
+            className=" w-40 sm:w-80 h-auto object-contain z-30 pointer-events-none "
             priority
           />{" "}
         </div>

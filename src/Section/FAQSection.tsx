@@ -108,7 +108,7 @@ export default function AskMyTwinAi() {
           <div className="mt-4 text-white">Loading...</div>
         ) : (
           apiResponse && (
-            <div className="mt-4 w-full sm:w-xl bg-[#1E1E1E]/70 text-white p-4 rounded-2xl shadow-inner text-sm sm:text-base">
+            <div className="absolute top-12 mt-4 w-full sm:w-xl bg-[#1E1E1E]/70 text-white p-4 rounded-2xl shadow-inner text-sm sm:text-base">
               {apiResponse}
             </div>
           )

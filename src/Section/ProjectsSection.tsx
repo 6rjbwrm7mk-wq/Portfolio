@@ -34,9 +34,9 @@ function ProjectsSection() {
   ];
   return (
     <>
-      <section className="relative w-full h-screen overflow-hidden p-5 lg:p-10 flex flex-col gap-2 ">
+      <section className="relative w-full h-screen overflow-hidden p-5 gap-4 lg:gap-8 lg:p-10 flex flex-col  ">
         {/* Title */}
-        <div className="w-full flex flex-col justify-center items-center gap-2">
+        <div className="w-full flex flex-col justify-center items-center sm:items-start gap-2">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
             Projects
           </h2>
@@ -49,11 +49,11 @@ function ProjectsSection() {
         {/* Content Wrapper */}
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8 mt-6">
           {/* INFORMATION LIST */}
-          <div className=" w-fit flex justify-center md:justify-end">
+          <div className="relative lg:-left-5  w-fit flex justify-center md:justify-end">
             <InformationList data={projects} />
           </div>
           {/* IMAGE */}
-          <div className=" absolute bottom-0 right-1 md:bottom-0 md:right-0 w-24 md:relative sm:w-24 md:w-72 lg:w-[360px] flex justify-center ">
+          <div className=" absolute bottom-0 right-1 md:bottom-0 md:right-0 w-40 md:relative sm:w-24 md:w-72 lg:w-[360px] flex justify-center ">
             {" "}
             <Image
               src="/ProjectsImg.png"

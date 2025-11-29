@@ -2,32 +2,51 @@ import InformationList from "./PopupInformation";
 import Image from "next/image";
 export default function ContentEducationMobileV() {
   const education = [
-    { title: "High School", time: "2015-2019", description: "XYZ High School" },
     {
-      title: "Bachelor's Degree",
-      time: "2019-2023",
-      description: "ABC University",
+      title: "Baccalaureate certificate",
+      time: "2024",
+      headtitle: "Department of Media Studies",
+      description: "Farhat Hached Institute, Sousse",
     },
     {
-      title: "Master's Degree",
-      time: "2023-2025",
-      description: "DEF University",
+      title: "Bachelor of CS",
+      time: "2024-2028",
+      headtitle: "Software Engineering",
+      description: "Higher School of Science and Technology of Hammam Sousse",
     },
     {
-      title: "Master's Degree",
-      time: "2023-2025",
-      description: "DEF University",
+      title: "Next Steps",
+      time: "Future",
+      headtitle: "Advanced Studies",
+      description:
+        "Planning to specialize further—possibly expand both technical and design expertise",
     },
     {
-      title: "Master's Degree",
-      time: "2023-2025",
-      description: "DEF University",
+      title: "Technical Skills",
+      time: "2023-Present",
+      headtitle: "Frontend Development",
+      description:
+        "Experience with React, Next.js, Tailwind CSS, and modern UI workflows.",
+    },
+    {
+      title: "Technical Skills",
+      time: "2025-Present",
+      headtitle: "Backend Development",
+      description:
+        "Experience with React, Next.js, Tailwind CSS, and modern UI workflows.",
+    },
+    {
+      title: "Design Experience",
+      time: "2024-Present",
+      headtitle: "UI/UX Foundations",
+      description:
+        "Good with Figma and interface creation; still improving toward a professional design workflow.",
     },
   ];
   return (
-    <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8 mt-6">
+    <div className="w-full flex flex-col md:flex-row justify-between items-center gap-12 mt-6">
       {/* INFORMATION LIST */}
-      <div className=" w-fit flex justify-center md:justify-end">
+      <div className=" w-full flex justify-center md:justify-end">
         <InformationList data={education} />
       </div>
       {/* IMAGE */}
@@ -38,7 +57,7 @@ export default function ContentEducationMobileV() {
           alt="What I Do"
           width={480}
           height={490}
-          className=" w-12 sm:w-full h-auto object-contain z-30 pointer-events-none "
+          className=" w-40 sm:w-full h-auto object-contain z-30 pointer-events-none "
           priority
         />{" "}
       </div>
