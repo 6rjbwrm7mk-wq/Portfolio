@@ -33,7 +33,7 @@ export default function FAQBtn({ message, iconeName, name }: PopUpCardProps) {
   `;
 
   return (
-    <button className={containerClasses}>
+    <button type="button" className={containerClasses}>
       {/* Gradient background */}
       <div
         className="absolute inset-0 z-1 opacity-55"

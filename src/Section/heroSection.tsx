@@ -46,7 +46,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   ) as Record<"home" | "about" | "projects" | "contact" | "faq", () => void>;
 
   return (
-    <section className="relative w-full h-screen flex flex-col items-center overflow-hidden">
+    <section className="relative w-full min-h-dvh h-screen flex flex-col items-center overflow-hidden">
       {/* Navigation */}
       <NavBar scrollMap={scrollMap} />
 
