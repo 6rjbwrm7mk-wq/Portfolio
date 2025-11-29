@@ -22,8 +22,8 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
 
   return (
-    <main className="bg-black">
-      <div ref={homeRef}>
+    <main className="bg-black h-screen overflow-y-scroll snap-y snap-mandatory ">
+      <div className="snap-start" ref={homeRef}>
         <HeroSection
           homeRef={homeRef}
           aboutRef={aboutRef}
@@ -37,35 +37,35 @@ export default function Home() {
         />
       </div>
 
-      <div ref={aboutRef}>
+      <div className="snap-start" ref={aboutRef}>
         <AboutSection />
       </div>
 
-      <div ref={whatRef}>
+      <div className="snap-start" ref={whatRef}>
         <WhatIDoSection />
       </div>
 
-      <div ref={experienceRef}>
+      <div className="snap-start" ref={experienceRef}>
         <ExperienceSection />
       </div>
 
-      <div ref={educationRef}>
+      <div className="snap-start" ref={educationRef}>
         <EducationSection />
       </div>
 
-      <div ref={projectsRef}>
+      <div className="snap-start" ref={projectsRef}>
         <ProjectsSection />
       </div>
 
-      <div ref={servicesRef}>
+      <div className="snap-start" ref={servicesRef}>
         <ServicesSection />
       </div>
 
-      <div ref={faqRef}>
+      <div className="snap-start" ref={faqRef}>
         <FAQSection />
       </div>
 
-      <div ref={contactRef}>
+      <div className="snap-start" ref={contactRef}>
         <ContactSection />
       </div>
     </main>
