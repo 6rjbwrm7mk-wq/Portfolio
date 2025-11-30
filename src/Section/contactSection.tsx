@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function ContactSection() {
   return (
-    <section className="relative w-full min-h-dvh h-screen pt-10 flex flex-col justify-between overflow-visible">
+    <section className="relative w-full h-dvh min-h-dvh pt-10 flex flex-col justify-between overflow-visible">
       <div className="relative flex flex-col lg:flex-row justify-between mb-6 items-center lg:items-end gap-10 px-5 lg:px-10 flex-1">
         {/* Left content */}
         <div className="w-full max-w-xl flex flex-col justify-center gap-10 md:gap-4">

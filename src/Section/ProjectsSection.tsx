@@ -34,7 +34,7 @@ function ProjectsSection() {
   ];
   return (
     <>
-      <section className="relative w-full min-h-dvh h-screen overflow-hidden p-5 gap-4 lg:gap-8 lg:p-10 flex flex-col  ">
+      <section className="relative w-full h-dvh min-h-dvh overflow-hidden p-5 gap-4 lg:gap-8 lg:p-10 flex flex-col  ">
         {/* Title */}
         <div className="w-full flex flex-col justify-center items-center sm:items-start gap-2">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">

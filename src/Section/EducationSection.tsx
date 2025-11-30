@@ -63,7 +63,7 @@ export default function EducationSection() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-dvh h-screen overflow-hidden p-5 lg:gap-4 lg:p-10 flex flex-col">
+    <section className="relative w-full h-dvh min-h-dvh overflow-hidden p-5 lg:gap-4 lg:p-10 flex flex-col">
       <div className="w-full flex flex-col justify-center items-center ">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
           Education

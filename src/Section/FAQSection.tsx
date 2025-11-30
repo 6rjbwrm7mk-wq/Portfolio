@@ -39,7 +39,7 @@ export default function AskMyTwinAi() {
   };
 
   return (
-    <section className="relative w-full min-h-dvh h-screen overflow-hidden p-5 sm:p-8 flex flex-col justify-between items-center">
+    <section className="relative w-full h-dvh min-h-dvh overflow-hidden p-5 sm:p-8 flex flex-col justify-between items-center">
       {/* Title + Floating Image */}
       <div className="flex flex-col items-center gap-4 sm:gap-8">
         {!message && (

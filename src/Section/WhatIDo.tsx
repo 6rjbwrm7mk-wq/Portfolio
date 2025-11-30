@@ -5,7 +5,7 @@ function WhatIDoSection() {
   return (
     <section
       className="
-      relative w-full min-h-dvh h-screen 
+      relative w-full h-dvh min-h-dvh
       flex flex-col items-center 
       gap-8 md:gap-12 lg:gap-16 
       overflow-hidden px-5 lg:px-10 py-10

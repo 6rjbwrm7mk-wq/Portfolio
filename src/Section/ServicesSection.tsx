@@ -26,7 +26,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="relative w-full min-h-dvh h-screen overflow-hidden p-5 gap-8 md:gap-4 lg:p-10 flex flex-col items-center justify-start md:justify-between">
+    <section className="relative w-full h-dvh min-h-dvh overflow-hidden p-5 gap-8 md:gap-4 lg:p-10 flex flex-col items-center justify-start md:justify-between">
       {/* Title & Subtitle */}
       <div className="w-full flex flex-col justify-center items-center gap-2">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white">

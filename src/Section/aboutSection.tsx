@@ -2,7 +2,7 @@ import Image from "next/image";
 function AboutSection() {
   return (
     <>
-      <section className="relative w-full min-h-dvh h-screen flex flex-col  items-end md:gap-2 md:justify-between md:items-center md:flex-row  overflow-hidden px-5 py-10 lg:p-10">
+      <section className="relative w-full h-dvh min-h-dvh flex flex-col  items-end md:gap-2 md:justify-between md:items-center md:flex-row  overflow-hidden px-5 py-10 lg:p-10">
         <div className="text-white w-full lg:w-xl gap-2 flex flex-col mt-10 ">
           <h2 className="text-3xl lg:text-5xl font-semibold">About Me</h2>
           <p className="text-base  lg:text-xl xl:text-2xl font-normal text-[#B5B5B6] z-10">
