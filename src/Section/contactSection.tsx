@@ -39,7 +39,6 @@ function ContactSection() {
           className="w-32 sm:w-24 lg:w-64 absolute right-1 -bottom-7 lg:relative lg:right-0 lg:bottom-0 "
         />
       </div>
-
       <FooterBar />
     </section>
   );

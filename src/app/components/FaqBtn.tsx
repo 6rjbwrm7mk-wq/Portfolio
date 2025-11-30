@@ -18,7 +18,7 @@ export default function FAQBtn({ message, iconeName, name }: PopUpCardProps) {
   `;
 
   const contentClasses = `
-    relative z-4 text-white flex items-center justify-center gap-2
+    relative w-full z-4 text-white flex items-center justify-center gap-2
     ${
       isCompact ? "py-2 sm:py-3" : "w-full h-full sm:flex-col px-3 py-2 sm:py-0"
     }

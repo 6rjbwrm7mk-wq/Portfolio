@@ -117,7 +117,10 @@ export default function AskMyTwinAi() {
               : "w-full sm:w-xl px-1.5 gap-3 sm:gap-0 flex flex-col sm:flex-row items-center justify-between"
           }
         >
-          <div onClick={(e) => handleClick(e, "Could you introduce yourself?")}>
+          <div
+            className="w-full"
+            onClick={(e) => handleClick(e, "Could you introduce yourself?")}
+          >
             <FAQBtn
               message={message}
               iconeName="mingcute:happy-line"
@@ -125,6 +128,7 @@ export default function AskMyTwinAi() {
             />
           </div>
           <div
+            className="w-full"
             onClick={(e) =>
               handleClick(e, "Which skills do you know more about?")
             }
@@ -136,6 +140,7 @@ export default function AskMyTwinAi() {
             />
           </div>
           <div
+            className="w-full"
             onClick={(e) => handleClick(e, "How do I get in touch with you?")}
           >
             <FAQBtn
