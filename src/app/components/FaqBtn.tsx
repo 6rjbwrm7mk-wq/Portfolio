@@ -9,12 +9,12 @@ interface PopUpCardProps {
 
 export default function FAQBtn({ message, iconeName, name }: PopUpCardProps) {
   const isCompact = Boolean(message);
-  const iconSize = isCompact ? 16 : 32;
+  const iconSize = isCompact ? 24 : 32;
 
   const containerClasses = `
     relative w-full rounded-md overflow-hidden cursor-pointer transition-transform
     hover:scale-[1.03] hover:shadow-[0_0_15px_rgba(79,169,245,0.4)]
-    ${isCompact ? "h-10 sm:w-44 sm:h-20" : "h-16 sm:w-44 sm:h-28"}
+    ${isCompact ? "h-10 sm:w-44 sm:h-16" : "h-16 sm:w-44 sm:h-28"}
   `;
 
   const contentClasses = `

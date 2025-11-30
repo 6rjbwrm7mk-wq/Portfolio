@@ -39,7 +39,7 @@ export default function AskMyTwinAi() {
   };
 
   return (
-    <section className="relative w-full h-dvh min-h-dvh overflow-hidden p-5 sm:p-8 flex flex-col justify-between items-center">
+    <section className="relative w-full h-dvh min-h-dvh overflow-hidden p-5  flex flex-col justify-between items-center">
       {/* Title + Floating Image */}
       <div className="flex flex-col items-center gap-4 sm:gap-8">
         {!message && (
@@ -64,8 +64,8 @@ export default function AskMyTwinAi() {
           <div
             className={
               message
-                ? "w-16 sm:w-28 lg:w-32 rotate-2"
-                : "w-28 sm:w-32 lg:w-40 rotate-2"
+                ? "w-16 sm:w-16 lg:w-20 rotate-2"
+                : "w-28 sm:w-28 lg:w-32 rotate-2"
             }
           >
             <Image src="/AskAIImg.png" alt="Ask AI" width={8000} height={8} />
@@ -88,7 +88,7 @@ export default function AskMyTwinAi() {
           </p>
         )}
 
-        <div className="relative w-full sm:w-fit flex justify-center rounded-2xl overflow-hidden ">
+        <div className="relative w-full sm:w-fit flex justify-center rounded-2xl overflow-hidden z-20 ">
           <input
             type="text"
             placeholder="Ask me anything..."
@@ -113,8 +113,8 @@ export default function AskMyTwinAi() {
         <div
           className={
             message
-              ? "w-full sm:w-xl px-1.5 gap-2 sm:gap-0 flex items-center justify-between"
-              : "w-full sm:w-xl px-1.5 gap-3 sm:gap-0 flex flex-col sm:flex-row items-center justify-between"
+              ? "w-full sm:w-xl px-1.5 gap-2 sm:gap-0 flex items-center justify-between z-20"
+              : "w-full sm:w-xl px-1.5 gap-3 sm:gap-0 flex flex-col sm:flex-row items-center justify-between z-20"
           }
         >
           <div
@@ -156,8 +156,20 @@ export default function AskMyTwinAi() {
           <div className="mt-4 text-white">Loading...</div>
         ) : (
           apiResponse && (
-            <div className="absolute top-12 mt-4 w-full sm:w-xl bg-[#1E1E1E]/70 text-white p-4 rounded-2xl shadow-inner text-sm sm:text-base">
-              {apiResponse}
+            <div
+              className="absolute h-[62vh] sm:h-[40vh] xl:h-[48vh] top-12 my-6 z-0 w-full sm:w-xl  rounded-2xl shadow-inner text-sm sm:text-base
+              overflow-y-scroll
+              [&::-webkit-scrollbar]:hidden
+              [-ms-overflow-style:none]
+              [scrollbar-width:none]"
+            >
+              <div className="w-full bg-[#1E1E1E]/70 text-white p-4 rounded-2xl shadow-inner text-sm sm:text-base">
+                {apiResponse.split("\n").map((line, i) => (
+                  <p key={i} className="mb-2">
+                    {line}
+                  </p>
+                ))}
+              </div>
             </div>
           )
         )}
