@@ -47,9 +47,9 @@ function ProjectsSection() {
         </div>
 
         {/* Content Wrapper */}
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8 mt-6">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8  ">
           {/* INFORMATION LIST */}
-          <div className="relative lg:-left-5  w-fit flex justify-center md:justify-end">
+          <div className="relative lg:-left-5   w-fit flex justify-center md:justify-end">
             <InformationList data={projects} />
           </div>
           {/* IMAGE */}

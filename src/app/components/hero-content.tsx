@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import InfoList from "./infoHeroList";
 
-function HeroContent() {
+function HeroContent({ onViewWork }: { onViewWork: () => void }) {
   return (
     <section className="relative flex justify-center items-center w-full h-screen">
       <div className="text-white flex flex-col justify-center items-center gap-6 sm:gap-8 absolute top-[13%]  p-5">
@@ -24,7 +24,10 @@ function HeroContent() {
           </div>
         </div>
 
-        <button className="bg-[#3A7BD5] w-44 h-12 sm:w-64 sm:h-16 font-normal text-xl md:text-2xl rounded-[40px] z-0 ">
+        <button
+          onClick={onViewWork}
+          className="bg-[#3A7BD5] w-44 h-12 sm:w-64 sm:h-16 font-normal text-xl md:text-2xl rounded-[40px] z-0 "
+        >
           View My Work
         </button>
       </div>

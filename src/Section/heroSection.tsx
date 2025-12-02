@@ -1,4 +1,3 @@
-// Section/heroSection.tsx
 "use client";
 
 import { useRef } from "react";
@@ -51,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <NavBar scrollMap={scrollMap} />
 
       {/* Hero content */}
-      <HeroContent />
+      <HeroContent onViewWork={scrollMap.projects} />
 
       {/* Mobile-only info list */}
       <div className="sm:hidden">
