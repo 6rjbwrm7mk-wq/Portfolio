@@ -1,5 +1,5 @@
 import FAQBtn from "@/app/components/FaqBtn";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { SetStateAction, useState } from "react";
 import { askGemini } from "@/app/utils/gemini"; // import helper
@@ -82,11 +82,19 @@ export default function AskMyTwinAi() {
             : "w-full h-fit flex flex-col items-center gap-3 sm:gap-4"
         }
       >
-        {message && (
-          <p className="text-white py-2 px-4 rounded-4xl bg-[#3A7BD5] absolute top-4">
-            {message}
-          </p>
-        )}
+        <AnimatePresence>
+          {message && (
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="text-white py-2 px-4 rounded-4xl bg-[#3A7BD5] absolute top-4"
+            >
+              {message}
+            </motion.p>
+          )}
+        </AnimatePresence>
 
         <div className="relative w-full sm:w-fit flex justify-center rounded-2xl overflow-hidden z-20 ">
           <input
@@ -109,7 +117,7 @@ export default function AskMyTwinAi() {
             />
           </button>
         </div>
-
+        {/* btn container */}
         <div
           className={
             message
